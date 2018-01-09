@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:58745/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:58745/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:58745/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EksamenSoapService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetDoorInfoByDoorNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoorInfoByDoorNumber" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDoorInfoByDoorNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoorInfoByDoorNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertDataFB_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDataFB" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertDataFB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDataFBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllInfoDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllInfoDB" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllInfoDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllInfoDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ClearInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClearInfo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ClearInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClearInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddInfo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllInfo" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetDoorInfoByDoorNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDoorInfoByDoorNumber" message="tns:IService1_GetDoorInfoByDoorNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDoorInfoByDoorNumberResponse" message="tns:IService1_GetDoorInfoByDoorNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDataFB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertDataFB" message="tns:IService1_InsertDataFB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertDataFBResponse" message="tns:IService1_InsertDataFB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInfoDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllInfoDB" message="tns:IService1_GetAllInfoDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllInfoDBResponse" message="tns:IService1_GetAllInfoDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ClearInfo" message="tns:IService1_ClearInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ClearInfoResponse" message="tns:IService1_ClearInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddInfo" message="tns:IService1_AddInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddInfoResponse" message="tns:IService1_AddInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllInfo" message="tns:IService1_GetAllInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllInfoResponse" message="tns:IService1_GetAllInfo_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDoorInfoByDoorNumber">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDoorInfoByDoorNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDataFB">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertDataFB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInfoDB">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllInfoDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearInfo">
+      <soap:operation soapAction="http://tempuri.org/IService1/ClearInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddInfo">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInfo">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:58745/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
